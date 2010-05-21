@@ -1335,9 +1335,10 @@
 		};
 		00A952F30FDA2B99006A80A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 001ED7AB11728BA30046CD38 /* iPhoneSimulator-Debug.xcconfig */;
+			baseConfigurationReference = 001ED7AA11728A930046CD38 /* iPhoneSimulator-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Debug;
 		};
@@ -1346,6 +1347,7 @@
 			baseConfigurationReference = 001ED7AA11728A930046CD38 /* iPhoneSimulator-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Release;
 		};
@@ -1354,6 +1356,7 @@
 			baseConfigurationReference = 001ED7AD11728CDE0046CD38 /* iPhoneDevice-Debug.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};
@@ -1362,6 +1365,7 @@
 			baseConfigurationReference = 001ED7AC11728C4C0046CD38 /* iPhoneDevice-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
 		};
@@ -1404,6 +1408,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.0;
 			};
@@ -1417,6 +1425,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.0;
 			};
