@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		00A953BF0FDA36FA006A80A6 /* CombineLibs (3.0) */ = {
+		00A953BF0FDA36FA006A80A6 /* CombineLibs (4.0) */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 00A953C50FDA36FA006A80A6 /* Build configuration list for PBXAggregateTarget "CombineLibs (3.0)" */;
+			buildConfigurationList = 00A953C50FDA36FA006A80A6 /* Build configuration list for PBXAggregateTarget "CombineLibs (4.0)" */;
 			buildPhases = (
 				00A953C40FDA36FA006A80A6 /* ShellScript */,
 			);
 			dependencies = (
-				00A953CB0FDA370F006A80A6 /* PBXTargetDependency */,
-				00A953C90FDA370F006A80A6 /* PBXTargetDependency */,
+				AE4D720511DB82AC00F4CDA6 /* PBXTargetDependency */,
+				AE4D720711DB82AC00F4CDA6 /* PBXTargetDependency */,
 			);
-			name = "CombineLibs (3.0)";
+			name = "CombineLibs (4.0)";
 			productName = BuildAll;
 		};
 /* End PBXAggregateTarget section */
@@ -264,19 +264,19 @@
 			remoteGlobalIDString = 00A952C40FDA2B99006A80A6;
 			remoteInfo = "GHUnitIPhone (Simulator-3.0)";
 		};
-		00A953C80FDA370F006A80A6 /* PBXContainerItemProxy */ = {
+		AE4D720411DB82AC00F4CDA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 00A952F60FDA2BB8006A80A6;
-			remoteInfo = "GHUnitIPhone (Device-3.0)";
+			remoteGlobalIDString = 0002874211814A1F00D74BBD /* GHUnitIPhone (Simulator-4.0) */;
+			remoteInfo = "GHUnitIPhone (Simulator-4.0)";
 		};
-		00A953CA0FDA370F006A80A6 /* PBXContainerItemProxy */ = {
+		AE4D720611DB82AC00F4CDA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 00A952C40FDA2B99006A80A6;
-			remoteInfo = "GHUnitIPhone (Simulator-3.0)";
+			remoteGlobalIDString = 0002877311814A5300D74BBD /* GHUnitIPhone (Device-4.0) */;
+			remoteInfo = "GHUnitIPhone (Device-4.0)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1006,7 +1006,7 @@
 				00A952C40FDA2B99006A80A6 /* GHUnitIPhone (Simulator-3.0) */,
 				00A952F60FDA2BB8006A80A6 /* GHUnitIPhone (Device-3.0) */,
 				1D6058900D05DD3D006BFB54 /* Tests (3.0) */,
-				00A953BF0FDA36FA006A80A6 /* CombineLibs (3.0) */,
+				00A953BF0FDA36FA006A80A6 /* CombineLibs (4.0) */,
 				0002874211814A1F00D74BBD /* GHUnitIPhone (Simulator-4.0) */,
 				0002877311814A5300D74BBD /* GHUnitIPhone (Device-4.0) */,
 				000287DE11814C2800D74BBD /* Tests (4.0) */,
@@ -1273,15 +1273,15 @@
 			target = 00A952C40FDA2B99006A80A6 /* GHUnitIPhone (Simulator-3.0) */;
 			targetProxy = 00A22E2010217BF700337F7B /* PBXContainerItemProxy */;
 		};
-		00A953C90FDA370F006A80A6 /* PBXTargetDependency */ = {
+		AE4D720511DB82AC00F4CDA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 00A952F60FDA2BB8006A80A6 /* GHUnitIPhone (Device-3.0) */;
-			targetProxy = 00A953C80FDA370F006A80A6 /* PBXContainerItemProxy */;
+			target = 0002874211814A1F00D74BBD /* GHUnitIPhone (Simulator-4.0) */;
+			targetProxy = AE4D720411DB82AC00F4CDA6 /* PBXContainerItemProxy */;
 		};
-		00A953CB0FDA370F006A80A6 /* PBXTargetDependency */ = {
+		AE4D720711DB82AC00F4CDA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 00A952C40FDA2B99006A80A6 /* GHUnitIPhone (Simulator-3.0) */;
-			targetProxy = 00A953CA0FDA370F006A80A6 /* PBXContainerItemProxy */;
+			target = 0002877311814A5300D74BBD /* GHUnitIPhone (Device-4.0) */;
+			targetProxy = AE4D720611DB82AC00F4CDA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1402,7 +1402,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -1415,7 +1415,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};
@@ -1467,7 +1467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00A953C50FDA36FA006A80A6 /* Build configuration list for PBXAggregateTarget "CombineLibs (3.0)" */ = {
+		00A953C50FDA36FA006A80A6 /* Build configuration list for PBXAggregateTarget "CombineLibs (4.0)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00A953C60FDA36FA006A80A6 /* Debug */,
