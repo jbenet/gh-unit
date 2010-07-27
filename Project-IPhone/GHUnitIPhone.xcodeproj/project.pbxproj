@@ -268,14 +268,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0002874211814A1F00D74BBD /* GHUnitIPhone (Simulator-4.0) */;
+			remoteGlobalIDString = 0002874211814A1F00D74BBD;
 			remoteInfo = "GHUnitIPhone (Simulator-4.0)";
 		};
 		AE4D720611DB82AC00F4CDA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0002877311814A5300D74BBD /* GHUnitIPhone (Device-4.0) */;
+			remoteGlobalIDString = 0002877311814A5300D74BBD;
 			remoteInfo = "GHUnitIPhone (Device-4.0)";
 		};
 /* End PBXContainerItemProxy section */
@@ -496,6 +496,7 @@
 		1D6058910D05DD3D006BFB54 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA4F630368D1EE00C91783 /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98132CC11ED13FD003A64F2 /* iPhoneFramework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = iPhoneFramework.sh; sourceTree = "<group>"; };
 		D9A2E33A11A6132C00F7FA51 /* Framework.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Framework.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -742,6 +743,7 @@
 			isa = PBXGroup;
 			children = (
 				00A9533F0FDA2DD4006A80A6 /* CombineLibs.sh */,
+				D98132CC11ED13FD003A64F2 /* iPhoneFramework.sh */,
 			);
 			name = Scripts;
 			path = ../Scripts;
@@ -828,7 +830,6 @@
 			isa = PBXGroup;
 			children = (
 				8D1107310486CEB800E47090 /* Info.plist */,
-				0002880211814C2800D74BBD /* Info copy.plist */,
 				D9A2E33A11A6132C00F7FA51 /* Framework.plist */,
 			);
 			name = Resources;
@@ -1037,19 +1038,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		000287A911814A7500D74BBD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export FLAVOR=4_0\nsh ../Scripts/CombineLibs.sh\nsh ../Scripts/iPhoneFramework.sh\n";
-		};
 		000287FC11814C2800D74BBD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1075,7 +1063,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export FLAVOR=3_0\nsh ../Scripts/CombineLibs.sh\nsh ../Scripts/iPhoneFramework.sh";
+			shellScript = "export FLAVOR=4_0\nsh ../Scripts/CombineLibs.sh\nsh ../Scripts/iPhoneFramework.sh";
 		};
 		00C1A2F40F5286B100FCCA14 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1355,7 +1343,7 @@
 			baseConfigurationReference = 001ED7AA11728A930046CD38 /* iPhoneSimulator-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator3.2;
 			};
 			name = Debug;
 		};
@@ -1364,7 +1352,7 @@
 			baseConfigurationReference = 001ED7AA11728A930046CD38 /* iPhoneSimulator-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator3.2;
 			};
 			name = Release;
 		};
@@ -1373,7 +1361,7 @@
 			baseConfigurationReference = 001ED7AD11728CDE0046CD38 /* iPhoneDevice-Debug.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -1382,7 +1370,7 @@
 			baseConfigurationReference = 001ED7AC11728C4C0046CD38 /* iPhoneDevice-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Release;
 		};

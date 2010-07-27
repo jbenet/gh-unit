@@ -69,6 +69,7 @@ cp $COMBINED_LIB $FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME
 # Now copy the header files and the plist file
 echo "Framework: Copying headers and plist into current version..."
 cp ../Classes/*.h $FRAMEWORK_DIR/Headers/
+cp ../Classes/*/*.h $FRAMEWORK_DIR/Headers/
 cp ../Classes-IPhone/*.h $FRAMEWORK_DIR/Headers/
 cp Framework.plist $FRAMEWORK_DIR/Resources/Info.plist
 cp ../Classes-IPhone/GHUnitIPhoneTestMain.m $FRAMEWORK_DIR/Resources/.
