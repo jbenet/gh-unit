@@ -161,11 +161,11 @@ NSString *const GHTestFailureException = @"GHTestFailureException";
   if (!accuracy) {
     reason =
     [NSString stringWithFormat:@"'%@' should be equal to '%@'. %@",
-     [left ghu_contentDescription], [right ghu_contentDescription], testDescription];
+     left, right, testDescription];
   } else {
     reason =
     [NSString stringWithFormat:@"'%@' should be equal to '%@' +/-'%@'. %@",
-     [left ghu_contentDescription], [right ghu_contentDescription], [accuracy ghu_contentDescription], testDescription];
+     left, right, accuracy, testDescription];
   }
   
   return [self ghu_failureInFile:filename atLine:lineNumber reason:reason];
