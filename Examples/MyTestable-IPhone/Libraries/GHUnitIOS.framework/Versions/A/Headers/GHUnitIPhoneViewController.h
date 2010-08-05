@@ -1,8 +1,8 @@
 //
-//  GHUnit.h
-//  GHUnit
+//  GHUnitIPhoneViewController.h
+//  GHUnitIPhone
 //
-//  Created by Gabriel Handford on 1/19/09.
+//  Created by Gabriel Handford on 1/25/09.
 //  Copyright 2009. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
@@ -27,25 +27,45 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "GHTestCase.h"
-#import "GHAsyncTestCase.h"
-#import "GHTestSuite.h"
-#import "GHTestMacros.h"
-#import "GHTestRunner.h"
+#import "GHUnitIPhoneView.h"
 
-#import "GHTest.h"
-#import "GHTesting.h"
-#import "GHTestOperation.h"
-#import "GHTestGroup.h"
-#import "GHTest+JUnitXML.h"
-#import "GHTestGroup+JUnitXML.h"
-#import "NSException+GHTestFailureExceptions.h"
-#import "NSValue+GHValueFormatter.h"
+#import "GHUnitIPhoneTableViewDataSource.h"
+#import "GHUnitIPhoneTestViewController.h"
 
-#ifdef DEBUG
-#define GHUDebug(fmt, ...) do { \
-fputs([[[NSString stringWithFormat:fmt, ##__VA_ARGS__] stringByAppendingString:@"\n"] UTF8String], stdout); \
-} while(0)
-#else
-#define GHUDebug(fmt, ...) do {} while(0)
-#endif
+@interface GHUnitIPhoneViewController : UIViewController <UITableViewDelegate, GHTestRunnerDelegate, UISearchBarDelegate> {
+    
+  GHUnitIPhoneView *view_;
+  
+  //! Data source for table view
+  GHUnitIPhoneTableViewDataSource *dataSource_;
+  GHTestSuite *suite_;
+  
+  UIBarButtonItem *runButton_;
+  
+  //! If set then we will no longer auto scroll as tests are run
+  BOOL userDidDrag_;
+  
+}
+
+@property (retain, nonatomic) GHTestSuite *suite;
+
+- (void)reloadTest:(id<GHTest>)test;
+
+- (void)scrollToTest:(id<GHTest>)test;
+- (void)scrollToBottom;
+
+- (void)setStatusText:(NSString *)message;
+
+- (void)runTests;
+
+- (void)cancel;
+
+- (void)reload;
+
+- (void)loadDefaults;
+- (void)saveDefaults;
+
+- (GHUnitIPhoneTableViewDataSource *)dataSource;
+
+@end
+

@@ -1,9 +1,9 @@
 //
-//  GHUnit.h
-//  GHUnit
+//  GHUnitIPhoneView.h
+//  GHUnitIPhone
 //
-//  Created by Gabriel Handford on 1/19/09.
-//  Copyright 2009. All rights reserved.
+//  Created by Gabriel Handford on 4/12/10.
+//  Copyright 2010. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person
 //  obtaining a copy of this software and associated documentation
@@ -27,25 +27,26 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "GHTestCase.h"
-#import "GHAsyncTestCase.h"
-#import "GHTestSuite.h"
-#import "GHTestMacros.h"
-#import "GHTestRunner.h"
 
-#import "GHTest.h"
-#import "GHTesting.h"
-#import "GHTestOperation.h"
-#import "GHTestGroup.h"
-#import "GHTest+JUnitXML.h"
-#import "GHTestGroup+JUnitXML.h"
-#import "NSException+GHTestFailureExceptions.h"
-#import "NSValue+GHValueFormatter.h"
+@interface GHUnitIPhoneView : UIView {
+  UISearchBar *searchBar_;
+  
+  UITableView *tableView_;
+  
+  //! Status label at bottom of the view
+  UILabel *statusLabel_;
+ 
+  UISegmentedControl *filterControl_;
+    
+  UIToolbar *runToolbar_;  
+  
+  UIView *footerView_;
+}
 
-#ifdef DEBUG
-#define GHUDebug(fmt, ...) do { \
-fputs([[[NSString stringWithFormat:fmt, ##__VA_ARGS__] stringByAppendingString:@"\n"] UTF8String], stdout); \
-} while(0)
-#else
-#define GHUDebug(fmt, ...) do {} while(0)
-#endif
+@property (readonly, nonatomic) UILabel *statusLabel;
+@property (readonly, nonatomic) UISegmentedControl *filterControl;
+@property (readonly, nonatomic) UISearchBar *searchBar;
+@property (readonly, nonatomic) UITableView *tableView;
+
+
+@end
