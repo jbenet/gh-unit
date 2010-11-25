@@ -161,14 +161,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0002877311814A5300D74BBD /* GHUnitIPhone (Device) */;
+			remoteGlobalIDString = 0002877311814A5300D74BBD;
 			remoteInfo = "GHUnitIPhone (Device)";
 		};
 		D9F4E8EA120AAEEC0044EABE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0002874211814A1F00D74BBD /* GHUnitIPhone (Simulator) */;
+			remoteGlobalIDString = 0002874211814A1F00D74BBD;
 			remoteInfo = "GHUnitIPhone (Simulator)";
 		};
 /* End PBXContainerItemProxy section */
@@ -757,6 +757,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GHUnitIPhone" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -1027,7 +1028,7 @@
 					"-all_load",
 				);
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};
