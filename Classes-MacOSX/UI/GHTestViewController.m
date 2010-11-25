@@ -367,8 +367,11 @@ running=running_, exceptionFilename=exceptionFilename_, exceptionLineNumber=exce
   [dataSource_ saveDefaults];
   self.running = NO;
   
-  if (getenv("GHUNIT_AUTOEXIT")) exit(runner.test.stats.failureCount);
-  [NSApp terminate:self];
+  if (getenv("GHUNIT_AUTOEXIT")) {
+    NSLog(@"Exiting (GHUNIT_AUTOEXIT)");
+    exit(runner.test.stats.failureCount);
+    [NSApp terminate:self];
+  }  
 }
 
 - (void)testRunnerDidCancel:(GHTestRunner *)runner {

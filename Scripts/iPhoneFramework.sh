@@ -1,10 +1,13 @@
 # Original Script by  Pete Goodliffe
 # from http://accu.org/index.php/journals/1594
 
-# Modified by Juan Batiz-Benet to fit GHUnitIOS
+# Modified by Juan Batiz-Benet to fit GHUnit
+# Modified by Gabriel Handford for GHUnit
+
+set -e
 
 # Define these to suit your nefarious purposes
-                 FRAMEWORK_NAME=GHUnitIOS
+                 FRAMEWORK_NAME=GHUnit
                        LIB_NAME=libGHUnitIOS
               FRAMEWORK_VERSION=A
                      BUILD_TYPE=Release

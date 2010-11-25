@@ -25,6 +25,8 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
+//! @cond DEV
+
 //
 // Portions of this file fall under the following license, marked with:
 // GTM_BEGIN : GTM_END
@@ -266,9 +268,11 @@ operationQueue=operationQueue_;
     // Log JUnit XML if environment variable is set
     if (getenv("WRITE_JUNIT_XML")) {
       NSError *error = nil;
-      [testSuite writeJUnitXML:&error];
-      if (!error) [self log:@"Wrote JUnit XML successfully.\n"];
-      else [self log:[NSString stringWithFormat:@"Error writing JUnit XML: %@\n", [error description]]];
+      if (![testSuite writeJUnitXML:&error]) {
+        [self log:[NSString stringWithFormat:@"Error writing JUnit XML: %@\n", [error localizedDescription]]];
+      } else {
+        [self log:@"Wrote JUnit XML successfully.\n"];
+      }
     }
   }
 
@@ -276,7 +280,9 @@ operationQueue=operationQueue_;
   running_ = NO;
 
   if ([delegate_ respondsToSelector:@selector(testRunnerDidEnd:)])
-    [[delegate_ ghu_proxyOnMainThread:kGHTestRunnerDelegateProxyWait] testRunnerDidEnd:self]; 
+    [[delegate_ ghu_proxyOnMainThread:kGHTestRunnerDelegateProxyWait] testRunnerDidEnd:self];   
 }
 
 @end
+
+//! @endcond
